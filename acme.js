@@ -1,4 +1,41 @@
 
+// WITH REDUCE
+
+// function acme (customer,sales){
+//   let result = {};
+
+//     const newCustomers = customer.reduce(function convert(newObj, curr){
+//       newObj[curr.id] = curr.name;
+//       return newObj;
+//     },{})
+
+//     const newSales = sales.reduce(function convert(newObj2, curr){
+//       if (newObj2.hasOwnProperty(curr.customerId)){
+//         let temp = newObj2[curr.customerId];
+//         newObj2[curr.customerId] = curr.total + temp;
+//       } else {
+//         newObj2[curr.customerId] = curr.total;
+//       }
+//     return newObj2;
+//     },{})
+
+
+//     for (let key in newSales){
+//       for (let key2 in newCustomers){
+//         if (key === key2){
+//           result[newCustomers[key2]] = newSales[key]
+//         }
+//       }
+//     }
+//     return result;
+// }
+
+
+
+
+
+// WITHOUT REDUCE
+
 const generateCustomerSalesMap = (sales, customers) => {
   let result = {};
   let newCustomers = {};
